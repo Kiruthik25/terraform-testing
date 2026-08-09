@@ -1,9 +1,0 @@
----
-- name: Mark kubelet, kubeadm, kubectl as held packages
-  ansible.builtin.dpkg_selections:
-    name: "{{ item }}"
-    selection: hold
-  loop:
-    - kubelet
-    - kubeadm
-    - kubectl
