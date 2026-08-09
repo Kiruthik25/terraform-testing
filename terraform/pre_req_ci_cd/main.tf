@@ -2,10 +2,10 @@
 module "github_oidc_cicd" {
   source = "git::https://github.com/Kiruthik25/terraform-testing.git?ref=main"
 
-  github_org  = var.github_org
+  github_org      = var.github_org
   github_owner_id = var.github_owner_id
-  github_repo = var.github_repo
-  github_repo_id = var.github_repo_id
+  github_repo     = var.github_repo
+  github_repo_id  = var.github_repo_id
 
   short_name  = var.short_name
   environment = var.environment
@@ -18,7 +18,7 @@ module "github_oidc_cicd" {
 # 2. GitHub side: push the role ARN into the repo as a secret, plus the variables
 module "github_secrets" {
   source = "git::https://github.com/Kiruthik25/terraform-testing.git?ref=main"
-  
+
 
   repository = var.github_repo
 
